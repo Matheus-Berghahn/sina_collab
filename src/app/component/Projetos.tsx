@@ -65,7 +65,13 @@ export default function Projetos() {
   );
 }
 
-function ProjetoCard({ projeto }) {
+interface Projeto {
+  id: string;
+  nome: string;
+  imagem: string;
+}
+
+function ProjetoCard({ projeto }: { projeto: Projeto }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.7, triggerOnce: true });
 
@@ -97,3 +103,4 @@ function ProjetoCard({ projeto }) {
     </div>
   );
 }
+
