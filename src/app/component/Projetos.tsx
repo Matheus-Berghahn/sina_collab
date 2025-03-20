@@ -91,7 +91,6 @@ function ProjetoCard({ projeto }) {
         />
       </motion.div>
 
-      {/* Efeito de hover */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300">
         <span className="text-white text-5xl font-bold">{projeto.nome}</span>
       </div>

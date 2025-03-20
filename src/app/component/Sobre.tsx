@@ -24,7 +24,6 @@ export default function Sobre() {
 
   return (
     <div ref={ref} className="w-full flex flex-col md:flex-row items-start py-20 md:py-60 px-4 md:px-8">
-      {/* Lado Esquerdo - Imagem */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Image
           src={img_sobre}
@@ -34,15 +33,13 @@ export default function Sobre() {
           className="rounded-lg shadow-lg object-cover w-full md:w-auto"
         />
       </div>
-
-      {/* Lado Direito - Texto */}
       <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start text-white px-4 md:px-6 mt-10 md:mt-0 pt-10">
         <motion.h2 initial={{ x: -100, opacity: 0 }} animate={textControls} className="text-lg md:text-xl tracking-wide lexend-regular">
           SOBRE
         </motion.h2>
         <motion.div initial={{ scaleX: 0 }} animate={lineControls} className="w-20 h-1 bg-white mt-2" style={{ transformOrigin: "left" }} />
 
-        {/* Texto abaixo */}
+
         <motion.div initial={{ opacity: 0, y: 30 }} animate={textControls} className="flex flex-col md:flex-row gap-6 mt-6">
           <p className="text-base md:text-lg leading-relaxed md:w-2/5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod nec magna eu tincidunt. Integer sagittis libero eget justo consequat.
@@ -52,9 +49,8 @@ export default function Sobre() {
           </p>
         </motion.div>
 
-        {/* Fotos abaixo do texto */}
         <motion.div initial={{ opacity: 0, y: 50 }} animate={imageControls} className="flex flex-col gap-8 mt-10 pt-10 md:pt-20 justify-center w-full">
-          {/* Matheus */}
+
           <div className="flex flex-col  md:flex-row gap-6 md:gap-10 items-center ">
             <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
               <Image src={img_matheus} alt="Matheus Berghahn" width={100} height={100} className="rounded-full shadow-lg shadow-purple-950/75 border-2 border-white w-24 md:w-28" />
@@ -65,7 +61,6 @@ export default function Sobre() {
             </div>
           </div>
 
-          {/* Ana */}
           <div className="flex flex-col md:flex-row  gap-6 md:gap-10 items-center">
             <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
               <Image src={img_ana} alt="Ana Kayser" width={100} height={100} className="rounded-full shadow-lg shadow-purple-950/75 border-2 border-white w-24 md:w-28" />

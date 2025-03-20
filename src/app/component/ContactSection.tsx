@@ -42,7 +42,6 @@ const ContactSection = () => {
     <div className="relative w-full py-20 md:py-40 bg-black border-b flex items-center justify-center px-5 shadow-lg">
       <div className="flex flex-col md:flex-col xl:flex-row items-start justify-center w-full md:w-4/5 max-w-screen-xl">
         
-        {/* Formulário */}
         <div className="w-full xl:w-1/2 md:pr-12">
           <motion.h2
             className="text-2xl text-center font-bold mb-10 text-white lexend-regular"
