@@ -39,10 +39,10 @@ export default function Projetos() {
   return (
     <div className="min-h-screen bg-black relative xl:pt-40 pt-28 lexend-regular">
       <header className="p-4 border-b h-full w-full" ref={ref}>
-      <motion.h1
+        <motion.h1
           initial={{ opacity: 0, top: '3rem', left: '3rem' }}
           animate={controlsAmber}
-          className="text-5xl xl:text-8xl font-bold absolute lexend-bold bg-gradient-to-r from-purple-800 to-black/10 bg-clip-text text-transparent"
+          className="text-5xl xl:text-8xl font-bold absolute lexend-bold bg-gradient-to-r from-amber-500 to-black/10 bg-clip-text text-transparent"
         >
           PROJETOS
         </motion.h1>
@@ -53,7 +53,6 @@ export default function Projetos() {
         >
           PROJETOS 
         </motion.h1>
-        
       </header>
 
       <div className="grid xl:grid-cols-2 pt-4">
@@ -82,7 +81,7 @@ function ProjetoCard({ projeto }: { projeto: Projeto }) {
   }, [inView, controls]);
 
   return (
-    <div ref={ref} className="relative overflow-hidden w-full h-[400px] group">
+    <div ref={ref} className="relative overflow-hidden w-full h-[200px] md:h-[200px] group">
       <motion.div
         initial={{ height: '0%' }}
         animate={controls}
@@ -91,9 +90,9 @@ function ProjetoCard({ projeto }: { projeto: Projeto }) {
         <Image
           src={projeto.imagem}
           alt={projeto.nome}
-          layout="fill"
-          objectFit="cover"
-          className="transition-all duration-300 group-hover:brightness-20"
+          fill
+          style={{ objectFit: 'cover' }}
+          className="transition-all duration-300 group-hover:brightness-20 scale-[1] md:scale-100"
         />
       </motion.div>
 
@@ -103,4 +102,3 @@ function ProjetoCard({ projeto }: { projeto: Projeto }) {
     </div>
   );
 }
-

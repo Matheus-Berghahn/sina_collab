@@ -1,14 +1,20 @@
 "use client";
 
 import Image from "next/image";
+
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import img_sobre from "../../../public/images/img_sobre.png";
+import img_sobre_01 from "../../../public/images/img_sobre_01.png";
+import img_sobre_02 from "../../../public/images/img_sobre_02.png";
 import img_matheus from "../../../public/images/matheus.jpg";
 import img_ana from "../../../public/images/ana.jpg";
 
 export default function Sobre() {
+
+  
+
   const textControls = useAnimation();
   const lineControls = useAnimation();
   const imageControls = useAnimation();
@@ -23,8 +29,9 @@ export default function Sobre() {
   }, [inView, textControls, lineControls, imageControls]);
 
   return (
-    <div ref={ref} className="w-full flex flex-col md:flex-row items-start py-20 md:py-60 px-4 md:px-8">
-      <div className="w-full md:w-1/2 flex justify-center">
+    <div ref={ref} className="w-full flex flex-col md:flex-row items-start py-20 md:py-60 px-4 md:px-8 relative">
+      <div className=" w-full md:w-1/2 flex justify-center relative">
+        {/* Imagem principal */}
         <Image
           src={img_sobre}
           alt="Sobre a empresa"
@@ -32,14 +39,33 @@ export default function Sobre() {
           height={700}
           className="rounded-lg shadow-lg object-cover w-full md:w-auto"
         />
+
+        {/* Imagens animadas */}
+
+        <motion.div
+          initial={{ scale: 0.9 }}
+          animate={{ scale: [0.9, 1, 0.9] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ transformOrigin: "23% 28%" }}
+        >
+          <Image
+            src={img_sobre_02}
+            alt="Sobre a empresa - detalhe 02"
+            width={700}
+            height={700}
+            className="rounded-lg object-cover w-full md:w-auto"
+          />
+        </motion.div>
       </div>
+      {/* Lado Direito - Texto */}
       <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start text-white px-4 md:px-6 mt-10 md:mt-0 pt-10">
         <motion.h2 initial={{ x: -100, opacity: 0 }} animate={textControls} className="text-lg md:text-xl tracking-wide lexend-regular">
           SOBRE
         </motion.h2>
         <motion.div initial={{ scaleX: 0 }} animate={lineControls} className="w-20 h-1 bg-white mt-2" style={{ transformOrigin: "left" }} />
 
-
+        {/* Texto abaixo */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={textControls} className="flex flex-col md:flex-row gap-6 mt-6">
           <p className="text-base md:text-lg leading-relaxed md:w-2/5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod nec magna eu tincidunt. Integer sagittis libero eget justo consequat.
@@ -49,11 +75,12 @@ export default function Sobre() {
           </p>
         </motion.div>
 
+        {/* Fotos abaixo do texto */}
         <motion.div initial={{ opacity: 0, y: 50 }} animate={imageControls} className="flex flex-col gap-8 mt-10 pt-10 md:pt-20 justify-center w-full">
-
+          {/* Matheus */}
           <div className="flex flex-col  md:flex-row gap-6 md:gap-10 items-center ">
             <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-              <Image src={img_matheus} alt="Matheus Berghahn" width={100} height={100} className="rounded-full shadow-lg shadow-purple-950/75 border-2 border-white w-24 md:w-28" />
+              <Image src={img_matheus} alt="Matheus Berghahn" width={100} height={100} className="rounded-full shadow-lg shadow-amber-700/60 border-2 border-white w-24 md:w-28" />
             </motion.div>
             <div className="flex flex-col items-center md:items-start">
               <span className="text-lg text-gray-300">Matheus Berghahn</span>
@@ -61,9 +88,10 @@ export default function Sobre() {
             </div>
           </div>
 
+          {/* Ana */}
           <div className="flex flex-col md:flex-row  gap-6 md:gap-10 items-center">
             <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-              <Image src={img_ana} alt="Ana Kayser" width={100} height={100} className="rounded-full shadow-lg shadow-purple-950/75 border-2 border-white w-24 md:w-28" />
+              <Image src={img_ana} alt="Ana Kayser" width={100} height={100} className="rounded-full shadow-lg shadow-amber-700/60 border-2 border-white w-24 md:w-28" />
             </motion.div>
             <div className="flex flex-col items-center md:items-start">
               <span className="text-lg text-gray-300">Ana Kayser</span>

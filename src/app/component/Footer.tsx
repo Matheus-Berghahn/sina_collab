@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center py-4 bg-black text-white pt-6">
-      <p className="text-sm">© 2024 Sina. Todos os direitos reservados.</p>
+      <p className="text-sm">© 2025 Sina. Todos os direitos reservados.</p>
       <a 
         href="https://www.instagram.com/sina.collab/" 
         target="_blank" 
