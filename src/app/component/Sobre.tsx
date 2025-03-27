@@ -6,7 +6,6 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import img_sobre from "../../../public/images/img_sobre.png";
-import img_sobre_01 from "../../../public/images/img_sobre_01.png";
 import img_sobre_02 from "../../../public/images/img_sobre_02.png";
 import img_matheus from "../../../public/images/matheus.jpg";
 import img_ana from "../../../public/images/ana.jpg";
