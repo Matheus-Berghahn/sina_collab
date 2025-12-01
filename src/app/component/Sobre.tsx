@@ -67,11 +67,14 @@ export default function Sobre() {
         {/* Texto abaixo */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={textControls} className="flex flex-col md:flex-row gap-6 mt-6">
           <p className="text-base md:text-lg leading-relaxed md:w-2/5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod nec magna eu tincidunt. Integer sagittis libero eget justo consequat.
+            A <b>Sina_collab</b> nasceu da nossa rotina de trabalho. Somos um casal que atua há quatro anos nas áreas de design, desenvolvimento e comunicação, sempre envolvidos em projetos que exigem clareza, técnica e responsabilidade.
+
           </p>
           <p className="text-base md:text-lg leading-relaxed md:w-2/5">
-            Suspendisse potenti. Phasellus at ex a massa auctor fringilla nec sit amet libero. Vestibulum ante ipsum primis in faucibus.
+            Depois desse tempo acumulando experiência, decidimos estruturar nosso próprio estúdio. A ideia é simples: entregar um trabalho bem-feito, com processos organizados e foco no que realmente importa — resultado.
           </p>
+          <p className="text-base md:text-lg leading-relaxed md:w-2/5">
+            Hoje, a <b>Sina_collab</b> é a união da nossa experiência e do nosso método de trabalho — direto, organizado e comprometido com cada projeto.</p>
         </motion.div>
 
         {/* Fotos abaixo do texto */}

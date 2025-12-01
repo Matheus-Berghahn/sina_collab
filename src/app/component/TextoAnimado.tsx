@@ -43,7 +43,7 @@ const TextoAnimadoItem = ({ texto, isRight }: { texto: string; isRight: boolean 
 };
 
 export default function TextoAnimado() {
-  const textos = ["ID VISUAL", "LANDING PAGE", "ROTEIROS", "NOVO TEXTO"];
+  const textos = ["ID VISUAL", "LANDING PAGE", "ROTEIROS", "CRIAÇÃO DE ANÚNCIOS", "COPYWRITING", "E-MAIL MARKETING"];
 
   return (
     <div className="flex flex-col items-center space-y-16 w-full px-8 pt-32 overflow-x-hidden cursor-crosshair bg-black">
